@@ -13,16 +13,17 @@ blue:3
 
 def on_forever():
     global CarPark
+    CarPark = 10
     servos.P0.set_angle(0)
     huskylens.request()
-    if huskylens.is_appear(1, HUSKYLENSResultType_t.HUSKYLENS_RESULT_BLOCK):
+    if huskylens.is_appear(0, HUSKYLENSResultType_t.HUSKYLENS_RESULT_BLOCK):
         servos.P0.set_angle(90)
-        CarPark = CarPark + 1
-    elif huskylens.is_appear(2, HUSKYLENSResultType_t.HUSKYLENS_RESULT_BLOCK):
+        CarPark = CarPark - 1
+    elif huskylens.is_appear(0, HUSKYLENSResultType_t.HUSKYLENS_RESULT_BLOCK):
         servos.P0.set_angle(90)
-        CarPark = CarPark + 1
-    elif huskylens.is_appear(3, HUSKYLENSResultType_t.HUSKYLENS_RESULT_BLOCK):
+        CarPark = CarPark - 1
+    elif huskylens.is_appear(0, HUSKYLENSResultType_t.HUSKYLENS_RESULT_BLOCK):
         servos.P0.set_angle(90)
-        CarPark = CarPark + 1
+        CarPark = CarPark - 1
     basic.pause(3000)
 basic.forever(on_forever)
