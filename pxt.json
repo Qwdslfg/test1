@@ -8,7 +8,8 @@
         "servo": "*",
         "pxt-sonar": "github:microsoft/pxt-sonar#v0.0.5",
         "Huskylens": "github:tangjie133/pxt-huskylens#v2.0.4",
-        "pxt-muselab": "github:muselab/pxt-wifi-shield#v1.9.58"
+        "pxt-muselab": "github:muselab/pxt-wifi-shield#v1.9.58",
+        "smarthon-smartcity-kit": "github:smarthon/pxt-smartcity#v0.1.49"
     },
     "files": [
         "main.blocks",
