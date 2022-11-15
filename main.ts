@@ -37,6 +37,11 @@ basic.forever(function () {
     }
 })
 basic.forever(function () {
+    if (SmartCity.read_distance_sensor(SmartCity.DistanceUnit.Centimeters, DigitalPin.P13, DigitalPin.P14) < 10) {
+        CarPark += 1
+    }
+})
+basic.forever(function () {
     huskylens.request()
     if (huskylens.isAppear(1, HUSKYLENSResultType_t.HUSKYLENSResultBlock) || (huskylens.isAppear(2, HUSKYLENSResultType_t.HUSKYLENSResultBlock) || huskylens.isAppear(3, HUSKYLENSResultType_t.HUSKYLENSResultBlock))) {
         if (CarPark >= 1) {
